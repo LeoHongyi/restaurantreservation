@@ -1,0 +1,41 @@
+
+<div ng-controller="ReservationsCreateuserCtrl">
+    <h3>Make Reservation</h3>
+    <form ng-submit="addReservation()">
+        <div class="form-group row">
+            <label for="example-number-input" class="col-xs-2 col-form-label">PartySize</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="number" value="42" id="example-number-input" name="partysize" ng-model="partysize" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-datetime-local-input" class="col-xs-2 col-form-label">Date and time</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input" name="date" ng-model="date" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-tel-input" class="col-xs-2 col-form-label">Telephone</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="tel" value="1-(555)-555-5555" id="example-tel-input" name="telephonenumber" ng-model="telephonenumber" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-text-input" class="col-xs-2 col-form-label">Name</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="text" value="Artisanal kale" id="example-text-input" name="name" ng-model="name" required="required">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="example-text-input" class="col-xs-2 col-form-label">confirmationcode</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="text" id="example-text-input" name="confirmationcode" ng-model="confirmationcode" >
+
+            </div>
+        </div>
+        <button type="submit" class="btn btn-default">Confirm</button>
+        <a class="btn btn-danger" href="/#reservationsuser">cancel</a>
+    </form>
+
+</div>

@@ -1,0 +1,12 @@
+<div ng-controller="ReservationsDetailCtrl">
+    <a href="#/reservations">Go Back</a><br>
+        Customername:<p>{{reservation.name}}</p>
+        PhoneNumber:<small>{{reservation.phone}}</small>
+
+    <div class="actions">
+        <a href="#/reservations/edit/{{reservation._id}}" class="btn btn-primary">Edit</a>
+        <a href="#" class="btn btn-danger" ng-click="removeReservation()">Delete</a>
+
+    </div>
+
+</div>

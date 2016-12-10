@@ -1,0 +1,44 @@
+<h3 class="heading">Restaurant List</h3>
+<a href="/#reservationsuser" class="">goback</a>
+<div ng-controller="restaurantctrl">
+    <form class="form-inline well well-sm" >
+        <span class="glyphicon glyphicon-search" ></span >
+
+        <div class="form-group" >
+            <input type="text"
+                   class="form-control"
+                   id="name"
+                   ng-model="search.$"
+                   placeholder="Search ..."
+            />
+        </div >
+
+    </form >
+    <div class="row">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th>name</th>
+                    <th>contact</th>
+                    <th>email</th>
+                    <th>address</th>
+                    <th>open</th>
+                    <th>end</th>
+                    <td>edit</td>
+
+                </tr>
+                <tr ng-repeat="restaurant in restaurants| filter:search:strict">
+                    <td>{{restaurant.name}}</td>
+                    <td>{{restaurant.contact}}</td>
+                    <td>{{restaurant.email}}</td>
+                    <td>{{restaurant.address}}</td>
+                    <td>{{restaurant.open}}</td>
+                    <td>{{restaurant.end}}</td>
+                    <td><a href="#/restaurants/edit/{{restaurant._id}}" class="btn btn-primary">Edit</a></td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

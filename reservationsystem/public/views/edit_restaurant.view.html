@@ -1,0 +1,43 @@
+<div ng-controller="RestaurantEditCtrl">
+    <h3>Edit restaurant</h3>
+    <form ng-submit="updateRestaurant()">
+        <div class="form-group row">
+            <label for="example-number-input" class="col-xs-2 col-form-label">name</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="text" value="42" id="example-number-input" name="name" ng-model="restaurant.name" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-datetime-local-input" class="col-xs-2 col-form-label">contact</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="text" value="2011-08-19T13:45:00" id="example-datetime-local-input" name="restaurant.contact" ng-model="restaurant.contact" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-datetime-local-input" class="col-xs-2 col-form-label">email</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="text" value="2011-08-19T13:45:00"  name="reservation.email" ng-model="restaurant.email" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-datetime-local-input" class="col-xs-2 col-form-label">address</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="text" value="2011-08-19T13:45:00"  name="restaurant.address" ng-model="restaurant.address" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-datetime-local-input" class="col-xs-2 col-form-label">open</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="text" value="2011-08-19T13:45:00"  name="restaurant.open" ng-model="restaurant.open" required="required">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-datetime-local-input" class="col-xs-2 col-form-label">end</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="text" value="2011-08-19T13:45:00"  name="restaurant.end" ng-model="restaurant.end" required="required">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-default">Confirm</button>
+        <a class="btn btn-danger" href="/#restaurants">cancel</a>
+    </form>
+</div>

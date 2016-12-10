@@ -1,0 +1,38 @@
+<h3 class="heading">Reservation List</h3>
+<a href="/#reservations/add" class="btn btn-success">Make Reservation</a>
+
+<div ng-controller="reservationctrl">
+
+    <table class="table table-bordered">
+        <tbody>
+        <tr>
+            <th>date</th>
+            <th>partysize</th>
+            <th>confirmationcode</th>
+        </tr>
+        <tr ng-repeat="reservation in reservations">
+            <td ng-bind="reservation.date | date:'yyyy-MM-dd HH:mm:ss'"></td>
+            <td>{{reservation.partysize}}</td>
+            <td><input type="text" name="confirmationcode" ng-model="confirmationcode" /><div ng-if=" (reservation.confirmationcode == confirmationcode) == true ">
+
+                <a class="btn btn-default" href="#/reservations/details/{{reservation._id}}">contactDetail(CRUD)</a>
+            </div></td>
+        </tr>
+        </tbody>
+        <div ng-if=" reservations == false ">
+            No reservation to display
+        </div>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
